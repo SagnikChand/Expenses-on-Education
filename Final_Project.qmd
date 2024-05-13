@@ -1,0 +1,982 @@
+---
+title: "Final Project"
+author: "Sagnik Chand"
+date: "2024"
+format:
+  html:
+   embed-resources: true
+   self-contained-math: true
+---
+
+## Unraveling the Scholastic Success Equation: Exploring the Impact of School Investment, Teacher Salaries, and Graduation Rates on SAT Triumphs in Massachusetts District Schools - Sagnik Chand
+
+**Introduction**
+
+Every parent and teacher wants the best education possible for their high school students. Every taxpayer and administrator wants more return for his or her dollar. Every student wants to have a satisfying high school experience, consisting of an enjoyable time while gaining knowledge. The relationship between educational expenditure and student achievement has long been debated in educational research. Hanushek's seminal reviews have challenged the conventional wisdom, suggesting that increased spending on public education does not necessarily translate into improved educational outcomes. Despite substantial increases in per-pupil expenditure and average teacher salaries over the past few decades, student performance on standardized tests has remained stagnant. This raises questions about the efficacy of the current education system and the allocation of resources.
+
+Moreover, the existence of achievement gaps among students has been a persistent concern for educators and policymakers. Factors such as family background (Arteaga and Glewwe (2019), Berkowitz et al. (2017), Blandin (2017), Goddard et al. (2017)), racial and ethnic diversity (Bond & Lang, 2018; Gagnon & Mattingly, 2018; Mocombe, 2018; Taggart, 2018), socioeconomic status (Gearin et al., 2018; Rowe & Perry, 2020; Li et al., 2017), and school funding levels have all been implicated in contributing to these disparities (Baker, 2016; Hodges, 2018; Johnson & Vesely, 2017; Rauscher, 2018). In Massachusetts, a state renowned for its academic excellence, the presence of significant achievement gaps within school districts underscores the complexity of the issue.
+
+This research study aims to explore the relationship between various factors, including per pupil expenditure, average teacher salaries, student graduation rates, and Scholastic Aptitude Testing (SAT) scores in Massachusetts elementary schools. By scrutinizing the interplay among these variables, the goal is to uncover insights into how school funding levels and other factors impact academic achievement. Ultimately, this analysis seeks to provide valuable insights for evidence-based policymaking geared towards fostering educational equity and excellence across Massachusetts school districts.
+
+My research question holds significant importance due to its potential implications for educational policy and practice. By examining the relationship between per pupil expenditure, average teacher salaries, student graduation rates, and Scholastic Aptitude Testing (SAT) scores, we aim to gain insights into the effectiveness of resource allocation in Massachusetts schools. Understanding whether higher funding levels, along with other factors, correspond to improved academic outcomes can inform decisions aimed at optimizing educational investments and promoting student success. This investigation not only addresses a critical aspect of education equity but also offers insights that can drive evidence-based interventions to enhance the quality of education in Massachusetts schools (Minahan, Julie, 2021; Coate, Douglas & VanderHoff, James, 2000).
+
+------------------------------------------------------------------------
+
+**Research Question**
+
+How do Scholastic Aptitude Testing (SAT) scores differ when compared to per pupil expenditure costs, average teacher salaries, and student graduation rates of district schools in Massachusetts?
+
+------------------------------------------------------------------------
+
+**Hypothesis**
+
+Previous research has extensively examined hypotheses regarding the relationship between school funding levels, average teacher salaries, student graduation rates, and student achievement in Massachusetts elementary schools. These include assertions such as the lack of significant differences in standardized testing scores or per pupil expenditure rates based on school funding levels (Minahan, Julie, 2021). Additionally, studies have investigated the impact of district-level variables like expenditures per pupil, average classroom teacher salary, and student graduation rates on student achievement (Kopco, Allison N, 2022). However, my hypothesis diverges from these existing frameworks. I intend to explore a novel hypothesis that focuses on the correlation between Scholastic Aptitude Testing (SAT) scores and per-pupil expenditure, average teacher salaries, and student graduation rates in Massachusetts district schools. This unique approach aims to shed light on the specific influence of funding, teacher salaries, and graduation rates on student performance, using SAT scores as a metric of academic proficiency. Through this analysis, I aim to contribute fresh insights to the discourse surrounding educational equity and resource allocation in Massachusetts schools.
+
+*Hypothesis:* There is a significant difference in Scholastic Aptitude Testing (SAT) scores between Massachusetts district schools with varying per pupil expenditure levels, average teacher salaries, and student graduation rates.
+
+*H1-1:* There exists a significant correlation between Scholastic Aptitude Testing (SAT) scores and per-pupil expenditure in Massachusetts district schools.
+
+*H1-2:* There exists a significant correlation between SAT scores and average teacher's salaries in Massachusetts district schools.
+
+*H1-3:* There exists a significant correlation between SAT scores and student graduation rates in Massachusetts district schools.
+
+My Independent (Explanatory) Variables are:
+
+\- Per pupil expenditure: Per pupil expenditure represents the amount of money spent on each student within a fiscal year. It is calculated by dividing a district's operating costs by its average pupil membership, often measured in Full-Time Equivalents (FTEs).
+
+\- Average teacher salaries: Average teacher salary refers to the mean amount of compensation paid to teachers within a particular school. This figure is computed by dividing the total teaching salaries by the number of full-time equivalent (FTE) teachers employed at the school.
+
+\- Student graduation rates: These are the cumulative graduation rates for schools within the district.
+
+My Dependent (Outcome) Variable is:
+
+\- Scholastic Aptitude Testing (SAT) scores: These are SAT data, including mean scores, at both district and school levels for selected populations and all students.
+
+My Control Variable is:
+
+\- Low-Income Population: Low-income population refers to students enrolled in public and charter schools who come from economically disadvantaged backgrounds.
+
+My contribution bridges a notable gap in current research by integrating SAT scores with per-pupil expenditure, average teacher salaries, and student graduation rates in Massachusetts district schools. While prior studies primarily utilized MCAS scores for assessing achievement, my novel approach offers a broader perspective. By incorporating additional factors, such as teacher salaries and graduation rates, into the analysis, my research aims to provide a more comprehensive understanding of the complex dynamics between school funding and student success. This expanded scope enhances the depth and relevance of the analysis, offering valuable insights for educational policy and practice.
+
+------------------------------------------------------------------------
+
+**Data**
+
+*Description:* The dataset sourced from the Department of Elementary and Secondary Education (DESE) in Massachusetts comprises publicly available reports categorized into various sections. These reports provide comprehensive insights into district and school profiles within the state. Data within these datasets is regularly updated to ensure accuracy and relevance. The DESE allows schools and districts to manage their directory information, ensuring the information remains up-to-date.
+
+*Data sets:*
+
+1.  **Per Pupil Expenditures, All Funds** (https://profiles.doe.mass.edu/statereport/ppx.aspx) :
+
+-   This dataset contains per pupil expenditures, including in-district and total expenditures. Per pupil expenditures are calculated by dividing a district's operating costs by its average pupil membership (FTEs). The dataset includes details such as in-district expenditures per pupil, total expenditures per pupil (including in-district and out-of-district spending), and enrollment figures.
+
+-   Last updated: January 18, 2024.
+
+2.  **2020-2021 SAT Performance Report - All Students** (https://profiles.doe.mass.edu/statereport/sat.aspx)
+
+-   The SAT Performance Report provides SAT data, including mean scores, at both district and school levels for selected populations and all students. It is important to note that the Massachusetts DESE does not rank schools or districts based on SAT results. The report does not display scores from schools with fewer than 10 test takers.
+
+-   Last updated: December 7, 2023.
+
+3.  **2020-2021 Teacher Salaries Report** (https://profiles.doe.mass.edu/statereport/teachersalaries.aspx)
+
+-   The average teacher salary is determined by dividing the total teaching salaries by the number of full-time equivalent (FTE) teachers. Since the school year 2019-20, this report encompasses teacher salaries for both school districts and charter schools, whereas previously, only school districts' salaries were included.
+
+-   The salary totals come from the end-of-year financial reports submitted to DESE by school districts and charter schools.
+
+-   Last updated: June 12, 2023.
+
+4.  **2021 Graduation Rate Report (District) for All Students 4-Year Graduation Rate** (https://profiles.doe.mass.edu/statereport/gradrates.aspx)
+
+-   This data set incorporates graduation rates for district schools in Massachusetts. Graduation rates are omitted for cohort counts fewer than 6.
+
+-   Last updated: March 9, 2023.
+
+5.  **2021-22 Selected Populations Report** (https://profiles.doe.mass.edu/statereport/selectedpopulations.aspx)
+
+-   This report provides enrollment data for selected populations among all students in both public and charter schools within the state. The data is accurate as of October 1st of the selected school year. Data at the school level only includes those enrolled in public schools.
+
+-   Last updated: February 22, 2024.
+
+In our analysis focusing on the correlation between SAT scores and per-pupil expenditures, we have obtained the dataset for per-pupil expenditures for the year 2021. Furthermore, we have incorporated datasets for average teacher salaries and student graduation rates to investigate the factors influencing SAT scores thoroughly. This is in line with the 2020-2021 SAT scores data, thereby enriching the depth and breadth of our analysis. Additionally, we have acquired the selected populations data file from 2021 to utilize the number of students belonging to the low-income population as a control variable in our regression models. This enables us to account for family income while analyzing the effects of other variables on our dependent variable.
+
+*Pre-processing:* Our research aims to investigate the relationship between per-pupil expenditure, average teacher salaries, graduation rates, and SAT scores across all schools in Massachusetts, encompassing both district public and charter schools. We will merge two data sets obtained from the Massachusetts Department of Elementary and Secondary Education (DESE), which contain comprehensive information on various schools statewide. By integrating data on average teacher salaries and student graduation rates alongside per-pupil expenditure and SAT scores, we aim to conduct a thorough analysis of the factors influencing academic performance. Our primary variables of interest include 'Total Expenditure per pupil' from the per-pupil expenditure data set, 'Average Teacher Salaries', 'Graduation Rates', and a newly derived variable, 'Average SAT score,' calculated as the mean of Math and Reading SAT scores from the SAT performance data set. Furthermore, we will merge the selected population dataset with these datasets to create a control variable of interest termed "low income." This variable will signify the percentage of students originating from a low socioeconomic population within each district.
+
+*Data Integration Process:*
+
+1\. Combine Data sets: We will merge all four data sets, including per-pupil expenditure, SAT performance, average teacher salaries, graduation rates, and selected population using common variables such as district name and district code to ensure alignment and consistency across the data.
+
+2\. Variable Selection: Identify and select key variables for analysis, including 'Total Expenditure per pupil', 'Average Teacher Salaries', 'Graduation Rates', 'Average SAT score', and 'Low Income'.
+
+3\. Data Cleaning: Ensure consistency and accuracy by cleaning and validating the integrated data set.
+
+This consolidated data set, comprising per-pupil expenditure, SAT performance, average teacher salaries, and graduation rates, will form the cornerstone of our analysis. It will enable us to explore the intricate relationship between per-pupil expenditure, SAT scores, average teacher salaries, and graduation rates within both public and charter schools across Massachusetts districts. Incorporating the control variable "Low Income" will assist us in addressing the confounding relationship stemming from the socioeconomic statuses of these students' families.
+
+```{r}
+# Reading and merging the datasets based on shared variables.
+
+# Importing the necessary libraries.
+
+library(tidyverse)
+library(readxl)
+library(ggplot2)
+library(summarytools)
+library(boot)
+
+# Establishing the working directory to the appropriate folder.
+
+setwd("D:\\Umass\\2nd Semester\\DACSS 603\\Final Project\\Data")
+getwd()
+
+# All Excel files are read into R using the `read_excel()` function from the readxl package.
+
+Pup_Exp <- read_excel("D:\\Umass\\2nd Semester\\DACSS 603\\Final Project\\Data\\PerPupilExpenditures.xlsx", skip = 1) 
+
+SAT_Per <- read_excel("D:\\Umass\\2nd Semester\\DACSS 603\\Final Project\\Data\\sat_performance.xlsx", skip = 1)
+
+Tec_Sal <- read_excel("D:\\Umass\\2nd Semester\\DACSS 603\\Final Project\\Data\\TeacherSalaries.xlsx", skip = 1)
+
+Grad_Rat <- read_excel("D:\\Umass\\2nd Semester\\DACSS 603\\Final Project\\Data\\gradrates.xlsx", skip = 1)
+
+Sel_Pop <- read_excel("D:\\Umass\\2nd Semester\\DACSS 603\\Final Project\\Data\\selectedpopulations.xlsx", skip = 1)
+
+# Performing a preliminary assessment of the datasets using the `head()` function to ensure data integrity.
+
+head(Pup_Exp)
+head(SAT_Per)
+head(Tec_Sal)
+head(Grad_Rat)
+head(Sel_Pop)
+
+# Let's take a look at the summary statistics and structure of the datasets using the `summary()` function.
+
+summary(Pup_Exp)
+summary(SAT_Per)
+summary(Tec_Sal)
+summary(Grad_Rat)
+summary(Sel_Pop)
+
+```
+
+Upon reviewing the summary statistics, it is evident that the datasets have different dimensions, likely due to the absence of schools with fewer than 10 test-takers in the SAT score data set. To address this, appropriate functions will merge the data sets, retaining only the schools present in both. Additionally, irrelevant columns will be dropped along with those containing null values. Subsequently, the data set will be filtered removing any remaining rows with null values. Finally, a new column calculating the average SAT score will be created for inter-school comparison.
+
+```{r}
+# Cleaning the data sets separately before merging them together.
+
+# Retaining the required columns from the Per Pupil Expenditure data set.
+
+Pup_Exp <- Pup_Exp %>% 
+  select("District Name", "District Code", "Total Expenditures per Pupil")
+
+# Doing a Sanity check to make sure the data set looks good.
+
+head(Pup_Exp)
+
+# Similarly retaining the required columns for analysis from the Teacher Salary, Graduation Rates, Selected population, and SAT performance data set.
+
+SAT_Per <- SAT_Per %>% 
+  select("District Name", "District Code", "Reading / Writing", "Math")
+
+Tec_Sal <- Tec_Sal %>% 
+  select(-c(3,5))
+
+Grad_Rat <- Grad_Rat %>% 
+  select(1,2,4)
+
+Sel_Pop <- Sel_Pop %>% 
+  select(1,2,10)
+
+# Doing a Sanity check to make sure the data set looks good.
+
+head(SAT_Per)
+head(Tec_Sal)
+head(Grad_Rat)
+head(Sel_Pop)
+
+# Now we need to convert these above selected columns from these four data sets into our desired data type so that we can perform our required operations on them.
+
+str(Pup_Exp)
+str(Tec_Sal)
+str(Grad_Rat)
+str(Sel_Pop)
+
+# Before we convert the data type to numeric from character on the Per pupil expenditure and Average Teacher Salary column we need to use String R functions to extract the dollar amount from the total character string.
+
+library(stringr)
+
+Pup_Exp <- Pup_Exp %>% 
+  mutate(Expenditure = str_sub(`Total Expenditures per Pupil`, start = 2)) %>% 
+  select(-3)  # Removing the old column.
+
+Pup_Exp$Expenditure <- gsub(",", "", Pup_Exp$Expenditure) # Replacing commas with empty string.
+
+# Similarly for the Average Teacher Salary column.
+
+Tec_Sal <- Tec_Sal %>% 
+  mutate('Avg. Salary' = str_sub(Tec_Sal$`Average Salary`, start = 2)) %>% 
+  select(-3) # Removing the old column.
+
+Tec_Sal$`Avg. Salary` <- gsub(",","", Tec_Sal$`Avg. Salary`) # Replacing commas with empty string.
+
+# Now we can convert the character data type into numerical data type.
+
+Pup_Exp$Expenditure <- as.numeric(Pup_Exp$Expenditure)
+Tec_Sal$`Avg. Salary` <- as.numeric(Tec_Sal$`Avg. Salary`)
+Sel_Pop$`Low Income %` <- as.numeric(Sel_Pop$`Low Income %`)
+
+typeof(Pup_Exp$Expenditure)
+typeof(Tec_Sal$`Avg. Salary`)
+typeof(Sel_Pop$`Low Income %`)
+
+# We also need to convert the Graduation Rates from character to Numeric data type.
+
+Grad_Rat$`% Graduated` <- as.numeric(Grad_Rat$`% Graduated`)
+
+typeof(Grad_Rat$`% Graduated`)
+
+# Doing a sanity check to make sure all of our data sets have our required columns with correct data types.
+
+str(Pup_Exp)
+str(Tec_Sal)
+str(Grad_Rat)
+str(Sel_Pop)
+
+# Now we can move on to merging these data sets into a single data set using the join() function on the given key value of District Code. We use inner_join() so that only matching rows from both the data frames exist in the final data frame.
+
+Final_df <- inner_join(Pup_Exp, SAT_Per, by = "District Code")
+Final_df <- inner_join(Final_df, Tec_Sal, by = "District Code")
+Final_df <- inner_join(Final_df, Grad_Rat, by = "District Code")
+Final_df <- inner_join(Final_df, Sel_Pop, by = "District Code")
+
+# Using dim() and str() on the data frame for it's structure sanity check.
+
+dim(Final_df)
+str(Final_df)
+
+# Now we can move forward to rearranging columns and column names. We also need to mutate this data frame in order to create a new column for average SAT scores.
+
+Final_df <- Final_df %>% 
+  select(- c('District Name.y','District Name.y.y','District Name.x.x','District Name'))
+Final_df <- Final_df %>% 
+  rename( 'District Name' = 'District Name.x',  'Per Pupil Expenditure' = 'Expenditure', 'Low Income' = 'Low Income %')
+Final_df <- Final_df %>% 
+  mutate( 'Avg SAT Score' = round((Final_df$`Reading / Writing`+ Final_df$Math)/2))
+Final_df <- Final_df %>% 
+  select(- c(4,5))
+
+head(Final_df)
+summary(Final_df)
+
+# We can see that there are 24 rows withg Na values in the Average SAT score column, we need to remove these rows before we can proceed with our analysis.
+
+Final_df <- Final_df %>% 
+  filter(!is.na(Final_df$`Avg SAT Score`))
+
+# Before proceeding to visualize the descriptive statistics, let's first examine a succinct and comprehensive summary table of our dataset using the descr() function from the summarytools package.
+
+descr(Final_df)
+
+# Now our Data set is finally ready to start working with. Let's start visualizing the descriptive statistics.
+
+```
+
+------------------------------------------------------------------------
+
+**Descriptive Visualization**
+
+The descriptive visualization provides a comprehensive overview of key variables, including per pupil expenditure, average teacher salaries, graduation rates, and SAT scores, within Massachusetts district schools. Through vibrant charts and graphs, we gain insights into the distribution, central tendency, and variability of these crucial metrics. This visualization not only facilitates a deeper understanding of the data set but also highlights the significance of descriptive statistics in uncovering patterns, trends, and potential relationships.
+
+*Box plots*
+
+1.  Per Pupil Expenditure:
+
+    The box plot illustrates that the median per pupil expenditures for schools in Massachusetts are approximately \$18,000. The first quartile (Q1) and third quartile (Q3) are around \$17,000 and \$21,000, respectively. Additionally, there are outliers with expenditures reaching up to \$35,000.
+
+    ```{r}
+
+    Fig1 <- ggplot(Final_df, aes(Final_df$`Per Pupil Expenditure`))+
+      geom_boxplot()+
+      labs(title = "Per Pupil Expenditure in US Dollars", x = "Expense in $")+
+      theme_minimal()+
+      theme(axis.text.y = element_blank(),
+            axis.ticks.y = element_blank())
+
+    Fig1
+    ```
+
+2.  Average Teacher's Salary:
+
+    This box plot illustrates the average teacher salary in Massachusetts district schools. The median salary for teachers in the state is approximately \$85,000, with the first quartile (Q1) and third quartile (Q3) hovering around \$75,000 and \$90,000, respectively. Outliers range from \$50,000 to \$1,20,000, indicating potential disparities in teacher salaries.
+
+    ```{r}
+
+    Fig2 <- ggplot(Final_df, aes(Final_df$`Avg. Salary`))+
+      geom_boxplot()+
+      labs(title = "Avg. Teacher Salary in US Dollars", x = "Salary in $")+
+      theme_minimal()+
+      theme(axis.text.y = element_blank(),
+            axis.ticks.y = element_blank())+
+      scale_x_continuous(limits = c(50000,120000), breaks = seq(50000,120000, by = 10000))
+
+    Fig2
+    ```
+
+3.  Graduation Rates:
+
+    This box plot displays the graduation rates of schools, revealing a median graduation rate of approximately 94%. The first and third quartiles depict favorable graduation rates, spanning from 90% to 97%. However, there are numerous outliers towards the lower end of the plot, indicating lower graduation rates, some as low as 70%.
+
+    ```{r}
+
+    Fig3 <- ggplot(Final_df, aes(Final_df$`% Graduated`))+
+      geom_boxplot()+
+      labs(title = "Graduation Rates", x = "% Graduated")+
+      theme_minimal()+
+      theme(axis.text.y = element_blank(),
+            axis.ticks.y = element_blank())
+
+    Fig3
+    ```
+
+4.  Average SAT Scores:
+
+    This box plot illustrates the distribution of average SAT scores across all schools. The median SAT score falls approximately at 560, with the first quartile around 540 and the third quartile around 580. Outliers are observed on both ends of the spectrum, with some schools achieving scores in the range of 660-690, while others score between 410-450.
+
+    ```{r}
+
+    Fig4 <- ggplot(Final_df, aes(Final_df$`Avg SAT Score`))+
+      geom_boxplot()+
+      labs(title = "Avg. SAT Scores", x = "SAT Scores")+
+      theme_minimal()+
+      theme(axis.text.y = element_blank(),
+            axis.ticks.y = element_blank())+
+      scale_x_continuous(limits = c(400,700), breaks = seq(400,700, by = 100))
+
+    Fig4
+    ```
+
+5.  Low Income:
+
+    This boxplot illustrates the distribution of the percentage of students belonging to a low-income socioeconomic population in our dataset. It is apparent that the median percentage of students belonging to this group is approximately 35% across all schools. The first quartile and third quartile values are approximately 20% and 47%, respectively. Notably, some schools have as much as 88% of students hailing from lower socioeconomic backgrounds, while others have only about 5% of students belonging to such groups.
+
+    ```{r}
+    Fig_income <- ggplot(Final_df, aes(Final_df$`Low Income`))+
+      geom_boxplot()+
+      labs(title = "Low Income Population", x = "% of Population")+
+      theme_minimal()+
+      theme(axis.text.y = element_blank(),
+            axis.ticks.y = element_blank())+
+      scale_x_continuous(limits = c(0,100), breaks = seq(0,100, by = 25))
+      
+    Fig_income
+    ```
+
+## *Scatter plots*
+
+In our research project, scatterplots are invaluable for visually exploring relationships between key variables. They offer a clear way to assess correlations, patterns, and trends in the data. For example, in our analysis of per pupil expenditure and SAT scores in Massachusetts district schools, scatterplots help us identify any potential connections between these factors. By revealing trends and outliers, scatterplots aid in making informed interpretations and hypotheses about the data. Their simplicity and effectiveness make them essential tools for descriptive visualization, enhancing our understanding of the data's underlying dynamics.
+
+1.  Per Pupil Expenditure Vs SAT Scores:
+
+    As illustrated in the scatter plot below, there appears to be no clear linear relationship between per-pupil expenditure and Average SAT scores. Despite variations in per pupil expenses, there is no apparent corresponding increase in Average SAT scores.
+
+    ```{r}
+
+    Fig5 <- ggplot(Final_df, aes(Final_df$`Per Pupil Expenditure`, Final_df$`Avg SAT Score`))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Per Pupil Expenditure Vs SAT Scores", x = "Per Pupil Expenditure ($)", y = "Avg. SAT Scores")+
+      scale_y_continuous(limits = c(400,700), breaks = seq(400,700, by = 100))
+
+    Fig5
+    ```
+
+2.  Average Teacher's Salaries Vs Average SAT Scores:
+
+    This scatter plot illustrates the relationship between average teacher salary and average SAT scores. It's intriguing to observe a somewhat linear trend between these two variables, suggesting that as average teacher salary increases, so do average SAT scores.
+
+    ```{r}
+
+    Fig6 <- ggplot(Final_df, aes(x = Final_df$`Avg. Salary`, y = Final_df$`Avg SAT Score`))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Average Teacher's Salaries Vs Average SAT Scores", x = "Average Salary ($)", y = "Average SAT Scores")+
+      scale_y_continuous(limits = c(400,700), breaks = seq(400,700, by = 100))+
+      scale_x_continuous(limits = c(50000,120000), breaks = seq(50000,120000, by = 10000))
+
+    Fig6
+    ```
+
+3.  Graduation Rates Vs Average SAT Scores:
+
+    The scatter plot below illustrates the correlation between school graduation rates and average SAT scores. It appears that the majority of schools have graduation rates exceeding 80%, with a slight linear trend showing higher SAT scores as graduation rates increase.
+
+    ```{r}
+
+    Fig7 <- ggplot(Final_df, aes(x = Final_df$`% Graduated`, y = Final_df$`Avg SAT Score`))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Graduation Rates Vs Average SAT Scores", y = "Avg. SAT Scores", x = "Graduation Rates (%)")+
+      scale_x_continuous(limits = c(60,100), breaks = seq(60,100, by = 10))+
+      scale_y_continuous(limits = c(400,700), breaks = seq(400,700, by = 100))
+
+    Fig7
+    ```
+
+4.  Per Pupil Expenditure Vs Average Teacher's Salary:
+
+    The scatter plot below depicts the correlation between per-pupil expenditure and average teacher salaries. It reveals a subtle linear relationship between these two variables, suggesting that higher per-pupil expenses are associated with increased teacher salaries.
+
+    ```{r}
+
+    Fig8 <- ggplot(Final_df, aes(x = Final_df$`Per Pupil Expenditure`, y = Final_df$`Avg. Salary`))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Per Pupil Expenditure Vs Average Teacher's Salary", x = "Per Pupil Expenditure ($)", y = "Avg. Teacher's Salary ($)")+
+      scale_x_continuous(limits = c(10000,35000), breaks = seq(10000,35000, by = 5000))+
+      scale_y_continuous(limits = c(50000,120000), breaks = seq(50000,120000, by = 10000))
+
+    Fig8
+    ```
+
+5.  Per Pupil Expenditure Vs Graduation Rates:
+
+    The scatter plot presented below illustrates the relationship between Per Pupil expenditure and graduation rates of schools. It is evident that a majority of the schools exhibit commendable graduation rates. However, the plot suggests that there is no clear correlation between increasing per pupil expenditure and higher graduation rates. Despite higher expenditure, there appears to be no significant increase in graduation rates, indicating that other factors may play a more influential role in determining graduation outcomes.
+
+    ```{r}
+    Fig9 <- ggplot(Final_df, aes(x = Final_df$`Per Pupil Expenditure`, y = Final_df$`% Graduated`))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Per Pupil Expenditure Vs Graduation Rates", x = "Per Pupil Expenditure ($)", y = "Graduation Rates (%)")
+
+    Fig9
+    ```
+
+6.  Average Teacher Salaries Vs Graduation Rates:
+
+    The scatter plot below depicts the relationship between average teacher salaries and graduation rates. Upon examination, we observe that the graduation rates remain consistently high across a wide range of teacher salaries. Despite variations in teacher salaries, the graduation rates generally remain stable. However, it is noteworthy that some schools with relatively high teacher salaries still exhibit graduation rates below 75%. This suggests that there is difficulty in establishing a clear correlation between teacher salaries and successful student graduation outcomes.
+
+    ```{r}
+    Fig10 <- ggplot(Final_df, aes(x = Final_df$`Avg. Salary`, y = Final_df$`% Graduated`))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Average Teacher's Salary Vs Graduation Rates", x = "Teacher Salaries ($)", y = "Graduation Rates (%)")
+
+    Fig10
+    ```
+
+Up to this point, our analysis has focused on using the average SAT scores as our dependent variable to explore any potential correlation with expenses. These average scores were derived by combining both math and reading/writing scores. Now, let's delve deeper into understanding whether expenses exert varying influences on different SAT scores. To accomplish this, we will investigate the impact of expenses on math scores and reading/writing scores separately, treating them as distinct dependent variables.
+
+To achieve this task, we will create a new data frame containing the per pupil expenditures, teacher salaries, and Math and Reading/Writing scores columns separately for each school. We can accomplish this by merging our existing data frame, which we've been using for analysis, with the SAT scores data frame.
+
+```{r}
+df_sep <- Final_df %>% 
+  select(1:4)
+
+df_sep <- inner_join(df_sep, SAT_Per, by = "District Code")
+
+df_sep <- df_sep %>% 
+  select(-5) %>% 
+  rename("District Name" = "District Name.x")
+
+head(df_sep)
+```
+
+Now that we have our data frame ready, we can proceed with visualization. We'll use scatter plots to explore how expenses affect Math scores compared to Reading/Writing scores.
+
+7.  Per Pupil Expenditure Vs Math & Reading SAT Scores:
+
+    ```{r}
+    Fig11 <- ggplot(df_sep, aes(x = df_sep$`Per Pupil Expenditure`, y = df_sep$Math))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Per Pupil Expenditure Vs SAT Scores (Math)", x = "Per Pupil Expenditure ($)", y = "SAT Score")
+
+    Fig11
+
+    Fig12 <- ggplot(df_sep, aes(x = df_sep$`Per Pupil Expenditure`, y = df_sep$`Reading / Writing`))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Per Pupil Expenditure Vs SAT Scores (Reading/Writing)", x = "Per Pupil Expenditure ($)", y = "SAT Score")
+
+    Fig12
+    ```
+
+The scatter plots above depict the relationship between per pupil expenditures and SAT scores, with separate plots for Math and Reading/Writing scores. There appears to be no strong correlation between expenditure values and SAT scores for either Math or Reading/Writing. Additionally, there's little discernible difference between the two subject areas in terms of SAT scores.
+
+Sometimes, assessing the impact of a one-dollar change in an independent variable on the variation in the dependent variable may not provide meaningful insights. In such cases, it's beneficial to categorize different expense groups based on their central tendencies and descriptive statistics within each school. By doing this, we can compare the influence of expenses on the dependent variable across these groups. To execute this, we'll categorize schools according to the mean, median, and quartile values of the expense variables. Subsequently, we can visualize and analyze the statistics within these groups.
+
+```{r}
+# Conducting descriptive statistics to determine group boundaries.
+
+summary(Final_df$`Per Pupil Expenditure`)
+
+# We can establish four distinct groups: Minimum to 1st Quartile, 1st Quartile to Mean, Mean to 3rd Quartile, and 3rd Quartile to Maximum.
+```
+
+```{r}
+# Selecting the required columns and creating a new grouping variable.
+
+df_fac <- Final_df %>% 
+  select(c(1,2,3,7)) %>% 
+  mutate(Group = case_when(`Per Pupil Expenditure` == 13661 | `Per Pupil Expenditure` < 16705 ~ 1,
+                            `Per Pupil Expenditure` == 16705 | `Per Pupil Expenditure` < 19120 ~ 2,
+                            `Per Pupil Expenditure` == 19120 | `Per Pupil Expenditure` < 20858 ~ 3,
+                            `Per Pupil Expenditure` == 20858 | `Per Pupil Expenditure` <= 35114 ~ 4
+    
+  ))
+
+df_fac # Checking the Sanity of the new data set.
+
+```
+
+Now that we have created a dataset containing the grouping variables, we can proceed to plot scatterplots between Per Pupil Expenditure and Average SAT scores displayed by different groups of expenditures. The first group consists of schools with per-pupil expenditure ranging from \$13,661 to \$16,704, the second group from \$16,705 to \$19,119, the third group from \$19,120 to \$20,857, and finally, the fourth group from \$20,858 to \$35,114.
+
+8.  Per Pupil Expenditure Vs Average SAT Scores among different Expenses Groups:
+
+    ```{r}
+    ggplot(df_fac, aes(df_fac$`Per Pupil Expenditure`, df_fac$`Avg SAT Score`))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Per Pupil Expense Vs Avg. SAT Score among Expense Groups", x = "Per Pupil Expenditure ($)", y = "Average SAT Score")+
+      facet_grid(~ df_fac$Group)+
+      theme(axis.text.x = element_text(angle = 45))+
+      scale_y_continuous(breaks = c(400,500,600,700), limits = c(400,700, by = 100))
+    ```
+
+The scatter plot above illustrates the distribution of average SAT scores across different per pupil expenditure groups. It is evident that despite variations in expenditure levels, there is minimal disparity in SAT performance. Remarkably, the distribution of SAT scores appears largely consistent across all expenditure brackets, with only slight variations in spread. Notably, the lowest expenditure group exhibits the fewest instances of low-performing SAT scores compared to other brackets. Conversely, the second bracket, ranging from \$16,705 to \$19,119, shows a smaller number of exceptionally high SAT scores. While the highest expenditure bracket displays a slightly higher occurrence of both overachieving and underachieving SAT scores, this may be attributed to its wider range. From a statistical standpoint, there is insufficient evidence to suggest significant differences in SAT scores among expenditure groups. Further exploration of additional variables is warranted before drawing conclusive interpretations.
+
+9.  Average SAT Scores Vs Low Income Population:
+
+    ```{r}
+    Fig13 <- ggplot(Final_df, aes(x = Final_df$`Low Income`, y = Final_df$`Avg SAT Score`))+
+      geom_point()+
+      theme_minimal()+
+      labs(title = "Average SAT Scores Vs Low Income Population", x = "Low Population (%)", y = "Avg. SAT Scores")+
+      scale_y_continuous(breaks = c(400,500,600,700), limits = c(400,700, by = 100))+
+      scale_x_continuous(breaks = c(0,25,50,75,100), limits = c(0,100, by = 25))
+
+    Fig13
+    ```
+
+The observed negative correlation in the scatter plot between average SAT scores and the percentage of students from low-income populations indicates an inverse relationship, suggesting that as the percentage of students from low-income backgrounds increases, average SAT scores tend to decrease. This finding holds important implications for regression analysis, where the coefficient for the low-income population percentage variable is expected to be negative, reflecting the association between socioeconomic status and SAT performance. Integrating this variable into the regression model can enhance its predictive accuracy by accounting for socioeconomic disparities in educational outcomes. Further investigation into the underlying mechanisms driving this relationship, including factors such as resource allocation and educational support, is warranted to inform more targeted interventions and policy strategies.
+
+## Hypothesis Testing
+
+In my research, I focus on understanding the factors influencing average SAT scores among students in district schools. The key explanatory variable under examination is the per pupil expenditure allocated by these schools. Additionally, I'm investigating the potential impact of two other variables: average teacher salaries and graduation rates from these schools. These variables serve as points of interest, with the hypothesis that they may play a role in influencing SAT scores. Given the observed negative relationship between average SAT scores and the low-income population, this variable can serve as a valuable control variable in our analysis. By including it, we gain a deeper understanding of the factors influencing our dependent variable. Regression analysis allows for a comprehensive examination of these variables, enabling the estimation of their effects on SAT scores while accounting for potential confounding factors. By conducting hypothesis testing using regression analysis, I aim to provide empirical insights into the determinants of SAT performance, informing educational policies and practices.
+
+### Model #1
+
+In this initial model, we will begin by examining the relationship between the key dependent variable, Average SAT score, and the key independent variable, Per pupil expenditure. We will conduct a linear regression analysis using the lm function and analyze the summary statistics to extract meaningful insights.
+
+```{r}
+# Fitting in the model with data.
+
+model_1_h1 <- lm(Final_df$`Avg SAT Score` ~ Final_df$`Per Pupil Expenditure`, data = Final_df)
+
+# Viewing summary statistics of the regression analysis.
+
+summary(model_1_h1)
+```
+
+```{r}
+# Scatter plot with regression line
+
+plot(Final_df$`Per Pupil Expenditure`, Final_df$`Avg SAT Score`, 
+     xlab = "Per Pupil Expenditure", ylab = "Average SAT Score", 
+     main = "Relationship between Per Pupil Expenditure and SAT Scores")
+
+# Adding a regression line
+
+abline(lm(Final_df$`Avg SAT Score` ~ Final_df$`Per Pupil Expenditure`, data = Final_df), col = "red")
+
+# The linear regression line indicates that there is no slope or explanatory power associated with the independent variable.
+```
+
+The coefficients table shows the estimates for the intercept and the slope of the regression line.
+
+\- Intercept (Estimated Coefficient): The estimated intercept coefficient represents the expected value of the dependent variable when the independent variable is zero. In this case, it suggests that the expected Average SAT score is 561.3 when the Per Pupil Expenditure is zero.
+
+\- Per Pupil Expenditure (Estimated Coefficient): The estimated coefficient for Per Pupil Expenditure represents the change in the dependent variable (Average SAT score) for a one-unit increase in the independent variable (Per Pupil Expenditure). Here, it indicates that a one-unit increase in Per Pupil Expenditure leads to a decrease of 0.0000312 in the Average SAT score, although this change is not statistically significant as indicated by the p-value of 0.97.
+
+Additionally, the residual standard error (44.91) represents the standard deviation of the residuals, indicating the average distance of the observed values from the regression line. The Multiple R-squared and Adjusted R-squared values assess the goodness-of-fit of the model, with low values indicating that the independent variable(s) do not explain much of the variability in the dependent variable. Lastly, the F-statistic tests the overall significance of the regression model, with a high p-value (0.9696) indicating that the model is not statistically significant in explaining the variation in the dependent variable.
+
+Based on the analysis above, it's evident that the model lacks statistical significance, as indicated by the low R-squared value and the high p-value associated with the independent variable. These results suggest that per pupil expenditure alone does not account for the variations observed in the dependent variable, Average SAT scores. To address this limitation, we will incorporate additional control variables into the model to assess whether they enhance the predictive capability and overall performance of the model. The analysis of this model yields significant evidence indicating that we fail to reject the null hypothesis for our first hypothesis, which posits that per-pupil expenditure has no significant relationship with our dependent variable of average SAT scores.
+
+### Model #2
+
+In this model, we will begin by examining the relationship between the key dependent variable, Average SAT score, and the key independent variable for our second hypothesis, Average Teacher's Salary. We will conduct a linear regression analysis using the lm function and analyze the summary statistics to extract meaningful insights.
+
+```{r}
+# Fitting in the model with data.
+
+model_1_h2 <- lm(Final_df$`Avg SAT Score` ~ Final_df$`Avg. Salary`, data = Final_df)
+
+# Viewing summary statistics of the regression analysis.
+
+summary(model_1_h2)
+```
+
+```{r}
+# Scatter plot with regression line
+
+plot(Final_df$`Avg. Salary`, Final_df$`Avg SAT Score`, 
+     xlab = "Avg Salary ($)", ylab = "Average SAT Score", 
+     main = "Relationship between Avg. Teacher's Salary and SAT Scores")
+
+# Adding a regression line
+
+abline(lm(Final_df$`Avg SAT Score` ~ Final_df$`Avg. Salary`, data = Final_df), col = "red")
+
+# The linear regression line indicates that there is no slope or explanatory power associated with the independent variable.
+```
+
+This regression analysis aims to understand the relationship between average SAT scores (dependent variable) and average teacher salaries (independent variable) using the linear regression model.
+
+\- Coefficients: The coefficient estimates represent the relationship between the dependent and independent variables. In this case, the intercept coefficient (4.629e+02) indicates the expected average SAT score when the average teacher salary is zero, which may not have a practical interpretation. The coefficient estimate for average teacher salary (1.173e-03) suggests that, on average, for every unit increase in average teacher salary, the average SAT score is expected to increase by approximately 0.001173 points.
+
+\- Significance Levels: The significance levels associated with the coefficients are indicated by the p-values. Here, both the intercept and average teacher salary coefficients are statistically significant (p \< 0.05), indicating that they have a significant impact on average SAT scores.
+
+\- Model Fit: The multiple R-squared value (0.08774) indicates that approximately 8.77% of the variance in average SAT scores is explained by the linear relationship with average teacher salaries. The adjusted R-squared value (0.08432) adjusts for the number of predictors in the model, providing a more accurate estimate of the proportion of variance explained.
+
+Overall, this regression analysis suggests that there is a statistically significant positive relationship between average teacher salaries and average SAT scores. However, the low R-squared value indicates that average teacher salaries explain only a small proportion of the variability in average SAT scores, suggesting that other factors not included in the model may also influence SAT performance. The analysis of this model yields significant evidence indicating that we can reject the null hypothesis for our second hypothesis, which posits that average teacher's salary has no significant relationship with our dependent variable of average SAT scores. In contrast average teacher's salary has a significant relationship with our dependent variable of average SAT scores.
+
+### Model #3
+
+In this model, we will begin by examining the relationship between the key dependent variable, Average SAT score, and the key independent variable for our third hypothesis, Graduation Rates. We will conduct a linear regression analysis using the lm function and analyze the summary statistics to extract meaningful insights.
+
+```{r}
+# Fitting in the model with data.
+
+model_1_h3 <- lm(Final_df$`Avg SAT Score` ~ Final_df$`% Graduated`, data = Final_df)
+
+# Viewing summary statistics of the regression analysis.
+
+summary(model_1_h3)
+```
+
+```{r}
+# Scatter plot with regression line
+
+plot(Final_df$`% Graduated`, Final_df$`Avg SAT Score`, 
+     xlab = "Graduation Rate (%)", ylab = "Average SAT Score", 
+     main = "Relationship between Graduation Rates and SAT Scores")
+
+# Adding a regression line
+
+abline(lm(Final_df$`Avg SAT Score` ~ Final_df$`% Graduated`, data = Final_df), col = "red")
+
+# The linear regression line indicates that there is no slope or explanatory power associated with the independent variable.
+```
+
+This regression analysis aims to examine the relationship between average SAT scores (dependent variable) and the percentage of students graduated (% Graduated) (independent variable) using the linear regression model.
+
+\- Coefficients: The coefficient estimates represent the relationship between the dependent and independent variables. In this case, the intercept coefficient (351.8887) indicates the expected average SAT score when the percentage of students graduated is zero, which may not have a practical interpretation. The coefficient estimate for the percentage of students graduated (2.2577) suggests that, on average, for every one percentage point increase in the graduation rate, the average SAT score is expected to increase by approximately 2.2577 points.
+
+\- Significance Levels: The significance levels associated with the coefficients are indicated by the p-values. Both the intercept and the percentage of students graduated coefficients are statistically significant (p \< 0.05), indicating that they have a significant impact on average SAT scores.
+
+\- Model Fit: The multiple R-squared value (0.09619) indicates that approximately 9.62% of the variance in average SAT scores is explained by the linear relationship with the percentage of students graduated. The adjusted R-squared value (0.0928) adjusts for the number of predictors in the model, providing a more accurate estimate of the proportion of variance explained.
+
+Overall, this regression analysis suggests that there is a statistically significant positive relationship between the percentage of students graduated and average SAT scores. However, the low R-squared value indicates that the percentage of students graduated explains only a small proportion of the variability in average SAT scores, suggesting that other factors not included in the model may also influence SAT performance. The analysis of this model yields significant evidence indicating that we can reject the null hypothesis for our third hypothesis, which posits that graduation rate has no significant relationship with our dependent variable of average SAT scores. In contrast graduation rate has a significant relationship with our dependent variable of average SAT scores.
+
+### Model #4
+
+Let's enhance our regression model by including average teacher salary and low income as a control variable alongside per pupil expenditure. Once the model is fitted, we'll visualize and analyze the summary test statistics.
+
+```{r}
+# Fitting in the model with data.
+
+model_2 <- lm(Final_df$`Avg SAT Score` ~ Final_df$`Per Pupil Expenditure` + Final_df$`Avg. Salary` + Final_df$`Low Income`, data = Final_df)
+
+# Viewing summary statistics of the regression analysis.
+
+summary(model_2)
+```
+
+```{r}
+# Scatter plot with regression line
+
+plot(Final_df$`Per Pupil Expenditure`, Final_df$`Avg SAT Score`, 
+     xlab = "Per Pupil Expenditure", ylab = "Average SAT Score", 
+     main = "Relationship between Per Pupil Expenditure and SAT Scores",
+     sub = "Salary and Low Income as control variable")
+
+# Addiing a regression line
+
+abline(lm(Final_df$`Avg SAT Score` ~ Final_df$`Per Pupil Expenditure` + Final_df$`Avg. Salary` + Final_df$`Low Income`, data = Final_df), col = "red")
+
+```
+
+```{r}
+# Extracting predicted values from the model
+
+predicted <- predict(model_2)
+
+# Creating a scatter plot
+
+plot(Final_df$`Avg SAT Score`, predicted, 
+     xlab = "Observed SAT Scores", ylab = "Predicted SAT Scores",
+     main = "Observed vs Predicted SAT Scores")
+
+# Adding a diagonal line for reference
+
+abline(0, 1, col = "red")
+
+# Adding a legend
+
+legend("bottomright", legend = "1:1 line", col = "red", lty = 1)
+
+# From the plot comparing predicted and observed SAT scores, it's evident that only a few scores align precisely along the 1:1 line, indicating accurate predictions. However, the majority of scores deviate from this line, suggesting either overestimation or underestimation by the model.
+```
+
+This regression analysis aims to explore the relationship between average SAT scores (dependent variable) and three independent variables: per-pupil expenditure, average teacher salary, and the percentage of students from low-income backgrounds (control variable).
+
+\- Coefficients: The coefficient estimates represent the relationship between the dependent and independent variables. The intercept coefficient (5.994e+02) indicates the expected average SAT score when all independent variables are zero. The coefficient estimates for per-pupil expenditure, average teacher salary, and the percentage of students from low-income backgrounds (-3.843e-04, 2.750e-04, and -1.497e+00, respectively) represent the change in the average SAT score associated with a one-unit change in each independent variable, holding other variables constant.
+
+\- Significance Levels: The significance levels associated with the coefficients are indicated by the p-values. In this analysis, the coefficients for per-pupil expenditure and average teacher salary are not statistically significant (p \> 0.05), indicating that they do not have a significant impact on average SAT scores. However, the coefficient for the percentage of students from low-income backgrounds is highly significant (p \< 0.001), suggesting that it has a significant effect on average SAT scores.
+
+\- Model Fit: The multiple R-squared value (0.5097) indicates that approximately 50.97% of the variance in average SAT scores is explained by the linear relationship with the independent variables included in the model. The adjusted R-squared value (0.5041) adjusts for the number of predictors in the model, providing a more accurate estimate of the proportion of variance explained.
+
+Overall, this regression analysis suggests that the percentage of students from low-income backgrounds has a significant negative impact on average SAT scores, while per-pupil expenditure and average teacher salary do not have a significant effect after controlling for the percentage of low-income students. The model explains a substantial proportion of the variability in average SAT scores, indicating its usefulness in predicting SAT performance based on these variables.
+
+### Model #5
+
+Let's experiment by swapping the control variable between average salary and graduation rate. This time, we will utilize graduation rate and low income alongside per pupil expenditure to predict the dependent variable of SAT scores.
+
+```{r}
+# Fitting in the model with data.
+
+model_3 <- lm(Final_df$`Avg SAT Score` ~ Final_df$`Per Pupil Expenditure` + Final_df$`% Graduated` + Final_df$`Low Income`, data = Final_df)
+
+# Viewing summary statistics of the regression analysis.
+
+summary(model_3)
+```
+
+```{r}
+# Extracting predicted values from the model
+
+predicted <- predict(model_3)
+
+# Creating a scatter plot
+
+plot(Final_df$`Avg SAT Score`, predicted, 
+     xlab = "Observed SAT Scores", ylab = "Predicted SAT Scores",
+     main = "Observed vs Predicted SAT Scores")
+
+# Adding a diagonal line for reference
+
+abline(0, 1, col = "red")
+
+# Adding a legend
+
+legend("bottomright", legend = "1:1 line", col = "red", lty = 1)
+
+# The model's predictive capabilities remain limited, as evidenced by the prevalence of underfitted or overfitted predictions.
+```
+
+This regression analysis explores the relationship between average SAT scores (dependent variable) and three independent variables: per-pupil expenditure, percentage of students graduated, and the percentage of students from low-income backgrounds.
+
+\- Coefficients: The coefficient estimates represent the relationship between the dependent and independent variables. The intercept coefficient (7.605e+02) indicates the expected average SAT score when all independent variables are zero. The coefficient estimates for per-pupil expenditure, percentage of students graduated, and the percentage of students from low-income backgrounds (4.571e-05, -1.457e+00, and -1.816e+00, respectively) represent the change in the average SAT score associated with a one-unit change in each independent variable, holding other variables constant.
+
+\- Significance Levels: The significance levels associated with the coefficients are indicated by the p-values. In this analysis, the coefficients for per-pupil expenditure and the percentage of students graduated are not statistically significant (p \> 0.05), indicating that they do not have a significant impact on average SAT scores. However, the coefficient for the percentage of students from low-income backgrounds is highly significant (p \< 0.001), suggesting that it has a significant effect on average SAT scores.
+
+\- Model Fit: The multiple R-squared value (0.5312) indicates that approximately 53.12% of the variance in average SAT scores is explained by the linear relationship with the independent variables included in the model. The adjusted R-squared value (0.5259) adjusts for the number of predictors in the model, providing a more accurate estimate of the proportion of variance explained.
+
+Overall, this regression analysis suggests that the percentage of students from low-income backgrounds has a significant negative impact on average SAT scores, while per-pupil expenditure and the percentage of students graduated do not have a significant effect after controlling for the percentage of low-income students. The model explains a substantial proportion of the variability in average SAT scores, indicating its usefulness in predicting SAT performance based on these variables.
+
+### Model #6
+
+In this iteration of our regression model, we will incorporate average teacher salaries, graduation rates, and low income as control variables alongside our independent variable of per pupil expenditure to predict SAT scores. Despite the statistical significance observed with the previous inclusion of individual control variables, both models exhibited low explanatory power in predicting SAT scores. Therefore, we aim to assess whether the combined inclusion of average teacher salaries, low income, and graduation rates as control variables enhances the predictive capability of our model.
+
+```{r}
+# Fitting in the model with data.
+
+model_4 <- lm(Final_df$`Avg SAT Score` ~ Final_df$`Per Pupil Expenditure` + Final_df$`% Graduated` + Final_df$`Avg. Salary` + Final_df$`Low Income`, data = Final_df)
+
+# Viewing summary statistics of the regression analysis.
+
+summary(model_4)
+```
+
+```{r}
+# Extracting predicted values from the model
+
+predicted <- predict(model_4)
+
+# Creating a scatter plot
+
+plot(Final_df$`Avg SAT Score`, predicted, 
+     xlab = "Observed SAT Scores", ylab = "Predicted SAT Scores",
+     main = "Observed vs Predicted SAT Scores")
+
+# Adding a diagonal line for reference
+
+abline(0, 1, col = "red")
+
+# Adding a legend
+
+legend("bottomright", legend = "1:1 line", col = "red", lty = 1)
+
+# While this model shows an improvement in predicting SAT scores compared to previous iterations, its success rate remains relatively low.
+```
+
+This regression analysis examines the relationship between average SAT scores (dependent variable) and four independent variables: per-pupil expenditure, percentage of students graduated, average teacher salary, and the percentage of students from low-income backgrounds.
+
+\- Coefficients: The coefficient estimates represent the relationship between the dependent and independent variables. The intercept coefficient (7.475e+02) indicates the expected average SAT score when all independent variables are zero. The coefficient estimates for per-pupil expenditure, percentage of students graduated, average teacher salary, and the percentage of students from low-income backgrounds (-1.147e-04, -1.405e+00, 1.209e-04, and -1.783e+00, respectively) represent the change in the average SAT score associated with a one-unit change in each independent variable, holding other variables constant.
+
+\- Significance Levels: The significance levels associated with the coefficients are indicated by the p-values. In this analysis, the coefficients for per-pupil expenditure and average teacher salary are not statistically significant (p \> 0.05), indicating that they do not have a significant impact on average SAT scores. However, the coefficients for the percentage of students graduated and the percentage of students from low-income backgrounds are highly significant (p \< 0.001), suggesting that they have a significant effect on average SAT scores.
+
+\- Model Fit: The multiple R-squared value (0.5319) indicates that approximately 53.19% of the variance in average SAT scores is explained by the linear relationship with the independent variables included in the model. The adjusted R-squared value (0.5248) adjusts for the number of predictors in the model, providing a more accurate estimate of the proportion of variance explained..
+
+Overall, this regression analysis suggests that the percentage of students graduated and the percentage of students from low-income backgrounds have significant negative impacts on average SAT scores, while per-pupil expenditure and average teacher salary do not have a significant effect after controlling for these variables. The model explains a substantial proportion of the variability in average SAT scores, indicating its usefulness in predicting SAT performance based on these variables.
+
+### Model #7
+
+For this regression model, we will use the average SAT score as our dependent variable, with low income and graduation rates serving as the independent variables.
+
+```{r}
+# Fitting in the model with data.
+
+model_5 <- lm(Final_df$`Avg SAT Score` ~ Final_df$`% Graduated` + Final_df$`Low Income`, data = Final_df)
+
+# Viewing summary statistics of the regression analysis.
+
+summary(model_5)
+```
+
+```{r}
+# Extracting predicted values from the model
+
+predicted <- predict(model_5)
+
+# Creating a scatter plot
+
+plot(Final_df$`Avg SAT Score`, predicted, 
+     xlab = "Observed SAT Scores", ylab = "Predicted SAT Scores",
+     main = "Observed vs Predicted SAT Scores")
+
+# Adding a diagonal line for reference
+
+abline(0, 1, col = "red")
+
+# Adding a legend
+
+legend("bottomright", legend = "1:1 line", col = "red", lty = 1)
+```
+
+This regression analysis explores the relationship between average SAT scores (dependent variable) and two independent variables: the percentage of students graduated and the percentage of students from low-income backgrounds.
+
+\- Coefficients: The coefficient estimates represent the relationship between the dependent and independent variables. The intercept coefficient (761.2850) indicates the expected average SAT score when both independent variables are zero. The coefficient estimates for the percentage of students graduated and the percentage of students from low-income backgrounds (-1.4563 and -1.8159, respectively) represent the change in the average SAT score associated with a one-unit change in each independent variable, holding the other variable constant.
+
+\- Significance Levels: The significance levels associated with the coefficients are indicated by the p-values. In this analysis, both the coefficients for the percentage of students graduated and the percentage of students from low-income backgrounds are highly significant (p \< 0.001), suggesting that they have a significant impact on average SAT scores.
+
+\- Model Fit: The multiple R-squared value (0.5312) indicates that approximately 53.12% of the variance in average SAT scores is explained by the linear relationship with the two independent variables included in the model. The adjusted R-squared value (0.5277) adjusts for the number of predictors in the model, providing a more accurate estimate of the proportion of variance explained.
+
+Overall, this regression analysis suggests that both the percentage of students graduated and the percentage of students from low-income backgrounds have significant negative impacts on average SAT scores. The model explains a substantial proportion of the variability in average SAT scores, indicating its usefulness in predicting SAT performance based on these variables.
+
+## Model Comparison
+
+Throughout our regression analysis, we explored the effects of three main independent variables---per-pupil expenditure, average teacher salary, and graduation rates---on SAT scores. The initial model, which solely considered per-pupil expenditure, lacked statistical significance and exhibited a notably low R-squared value. Subsequent models integrated average teacher salary and graduation rates as independent variables, both of which demonstrated statistical significance. However, their explanatory power remained modest, with R-squared values of approximately 8% and 9%, respectively. The fourth model, incorporating both average teacher salary and per-pupil expenditure along with the control variable of low-income population, produced robust results, exhibiting statistical significance with an R-squared value of around 50%. Nevertheless, only the control variable of low income showed statistical significance. The fifth model, omitting average teacher salary and focusing on per-pupil expenditure, low income as a control variable, and graduation rates, also demonstrated statistical significance with an R-squared value close to 52%. The sixth model included all independent variables along with the control variable of low income, showing statistical significance with a slightly higher R-squared value of 52%. However, in this model, only the low-income variable and graduation rate were significant. The final model comprised only the low-income and graduation rate as independent variables, which exhibited statistical significance with the highest R-squared value of around 53%. Overall, these findings underscore the varying impacts of different independent variables on SAT scores, with the seventh model showcasing the most comprehensive predictive capability.
+
+Throughout our iterative process of developing regression models, we explored various combinations of independent variables. Among these, the seventh model stood out as the most effective in predicting average SAT scores, utilizing graduation rate as the independent variable and low income as the control variable. This model exhibited statistical significance and achieved the highest R-squared value, explaining a substantial portion of the variation. To further evaluate the model's performance and identify the most suitable option among the alternatives, we will compare the Akaike Information Criterion (AIC), and Bayesian Information Criterion (BIC) values of each model.
+
+```{r}
+# Creating a vector of model names
+
+model_names <- c("Mod_1_h1", "Mod_1_h2", "Mod_1_h3", "Mod_2", "Mod_3", "Mod_4", "Mod_5")
+
+# Creating a vector of AIC scores for each model
+
+aic_scores <- c(AIC(model_1_h1), AIC(model_1_h3), AIC(model_1_h3), AIC(model_2), AIC(model_3), AIC(model_4), AIC(model_5))
+
+# Creating a vector of BIC scores for each model
+
+bic_scores <- c(BIC(model_1_h1), BIC(model_1_h2), BIC(model_1_h3), BIC(model_2), BIC(model_3), BIC(model_4), BIC(model_5))
+
+# Creating a vector of Adjusted R Squared.
+
+adj_r_squared <- c(summary(model_1_h1)$adj.r.squared,
+                   summary(model_1_h2)$adj.r.squared,
+                   summary(model_1_h3)$adj.r.squared,
+                   summary(model_2)$adj.r.squared,
+                   summary(model_3)$adj.r.squared,
+                   summary(model_4)$adj.r.squared,
+                   summary(model_5)$adj.r.squared)
+
+# Creating a vector of number of observations for each model.
+
+n_obs <- c(nobs(model_1_h1),
+           nobs(model_1_h2),
+           nobs(model_1_h3),
+           nobs(model_2),
+           nobs(model_3),
+           nobs(model_4),
+           nobs(model_5))
+
+# Creating the data frame
+
+mod_com <- data.frame(Model = model_names, AIC = aic_scores, BIC = bic_scores,
+                      Adj_R_Squared = adj_r_squared, Num_Observations = n_obs)
+
+# Viewing the data frame
+
+print(mod_com)
+
+```
+
+Based on the comparison of Adjusted R Squared, AIC, and BIC scores, model 5 exhibits competitive value. Therefore, model 5 is selected as the final model due to its lower AIC and BIC values and higher R-squared value of 0.527, indicating that it explains approximately 52.7% of the variation in the dependent variable.\
+
+## Conclusion
+
+Through thorough descriptive statistics and regression analysis, we delved into various models to uncover the intricate relationship between our independent variables and the dependent variable. Our focal point was the Average SAT scores, while pivotal independent variables included per pupil expenditure, average teacher salaries, and graduation rates. Additionally, we incorporated the low-income population percentage as a control variable. Intriguingly, our regression models revealed that all these independent variables hold statistical significance and wield an impact on our dependent variable. Specifically, per pupil expenditure demonstrated a negative correlation with SAT scores, whereas SAT scores exhibited an upward trend with higher graduation rates and average teacher salaries. Our ultimate model boasted a commendable R-squared value of approximately 53%. However, it's noteworthy that in this model, only graduation rates and the low-income variable demonstrated significance. This implies the presence of other unaccounted factors influencing academic success. Consequently, further exploration and analysis are imperative to comprehensively grasp and predict academic achievement.\
+
+Based on the analysis conducted, it appears that there is evidence to support my hypotheses. Specifically:
+
+1\. *H1-1*: The hypothesis stating that there exists a significant correlation between SAT scores and per-pupil expenditure in Massachusetts district schools is not supported by the regression analysis. While the relationship was found to be statistically insignificant, the direction of the correlation was negative, indicating that as per-pupil expenditure increases, SAT scores tend to decrease.
+
+2\. *H1-2*: Similarly, the hypothesis suggesting a significant correlation between SAT scores and average teacher salaries in Massachusetts district schools is supported. The regression analysis revealed a positive relationship between average teacher salaries and SAT scores, indicating that higher teacher salaries are associated with higher SAT scores.
+
+3\. *H1-3*: Finally, the hypothesis proposing a significant correlation between SAT scores and student graduation rates in Massachusetts district schools is also supported. The regression analysis demonstrated a positive relationship between graduation rates and SAT scores, suggesting that schools with higher graduation rates tend to have higher SAT scores.
+
+Overall, the outcomes of the regression analysis corroborate the second and third hypotheses, uncovering significant correlations between SAT scores and average teacher salaries, along with student graduation rates in Massachusetts district schools. Moreover, our control variable of Low Income emerges as highly significant when assessing our specified dependent variable. Notably, when all independent variables are included in the model, per pupil expenditure and average teacher salary lose their significance, underscoring that graduation rate and low income population serve as superior predictors as independent variables, encapsulating the explanatory power provided by per pupil expenditure and teacher salaries.
+
+## Regression Diagnostics
+
+```{r}
+# Running regression diagnostics plots
+
+plot(model_5, which = 1:6)
+```
+
+Diagnostic plots are essential tools for assessing the assumptions and performance of a regression model. Here's the interpretetion of the diagnostic plots for the final model:
+
+1\. Residuals vs Fitted Plot: This plot examines the relationship between the residuals (the differences between observed and predicted values) and the fitted values (the predicted values from the model). Ideally, the points should be randomly scattered around the horizontal line at zero, indicating that the residuals have constant variance across all levels of the fitted values. Patterns such as curvature or funnel shape may suggest heteroscedasticity or nonlinearity in the model. The points for our model are randomly scattered around the horizontal line at zero indication constant variance almost uptill the end where we can see a certain pattern.
+
+2\. Normal Q-Q Plot: The Normal Q-Q (quantile-quantile) plot evaluates whether the residuals follow a normal distribution. Points on the Q-Q plot should fall approximately along the diagonal line, indicating that the residuals are normally distributed. Deviations from the diagonal line suggest departures from normality. Our model has all of the points on Q-Q plot lying on the diagonal line, indicating residuals are normally distributed.
+
+3\. Scale-Location Plot: Also known as the "Spread-Location" plot, this graph assesses the homogeneity of variance (homoscedasticity) across the range of fitted values. The plot shows the square root of the standardized residuals against the fitted values. Ideally, the points should form a horizontal band with constant width, indicating homoscedasticity. A trend in the points suggests heteroscedasticity. Our model has some trend going on with the line showing a bit of heteroscedasticity.
+
+4\. Cook's Distance: Cook's distance measures the influence of each observation on the fitted values of the model. It quantifies how much the predicted values would change if a particular observation were excluded from the analysis. High Cook's distance values suggest that the corresponding data point has a substantial impact on the regression model's parameters and predictions. Observations with Cook's distance exceeding a certain threshold (often set at 4/n, where n is the number of observations) are considered influential and may warrant further investigation. Cook's distance for our plot is in accordance to our assumptions meaning that no data point influences the model too much.
+
+5\. Residuals vs Leverage Plot: This plot helps identify influential data points that may disproportionately affect the regression coefficients. Points that fall outside the dashed horizontal lines (Cook's distance) may have a significant impact on the model fit. High leverage points, indicated by points with extreme values on the x-axis, merit closer examination to determine if they are influential observations. For our model observation points number 44, 52, and 69 are influential observations and merit closer examination.
+
+6\. Cook's distance vs leverage: The Cook's distance vs leverage plot is a graphical representation of Cook's distance against leverage, which is a measure of how much an observation differs from the mean of the independent variables. This plot helps visualize influential data points that have both high leverage and high influence on the regression model. In this plot, influential data points are typically those located in the upper-right quadrant, indicating both high leverage and high influence. For our model there are no such data points which influence the model too much.
+
+By examining these diagnostic plots, we can assess the assumptions of the regression model, identify potential issues such as nonlinearity, heteroscedasticity, or influential outliers, and make informed decisions about model refinement or further analysis.
+
+To beautifully present the results of our regression analysis models, we will utilize the stargazer package. This package allows us to generate nicely formatted tables summarizing the key statistics and coefficients from our regression models. By using stargazer, we can create elegant tables that are easy to interpret and visually appealing. Let's employ the stargazer package to tabulate and present the results of our regression analysis models in a visually appealing format.
+
+```{r}
+# Loading the required library
+
+library(stargazer)
+
+# Creating a list for all of the models
+
+models_list <- list(model_1_h1, model_1_h2, model_1_h3, model_2, model_3, model_4, model_5)
+
+# Using the stargazer to generate a summarising table for the models
+
+stargazer(models_list, type = "text")
+
+
+```
